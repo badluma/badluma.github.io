@@ -1,0 +1,10 @@
+[
+  {
+    "label": "Serve",
+    "command": "bun --hot index.ts",
+    "reveal": "always",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "cwd": "$ZED_WORKTREE_ROOT"
+  }
+]

@@ -1,0 +1,71 @@
+html {
+  height: 100%;
+  cursor: none;
+
+  /* Hide scrollbar */
+  -webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.heading {
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
+}
+
+.subheading {
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
+}
+
+.text {
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
+}
+
+.link {
+  color: royalblue;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
+}
+
+.body {
+  background-color: black;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.title {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
