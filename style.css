@@ -31,6 +31,7 @@ html {
   font-family:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     Helvetica;
+  max-width: 500px;
 }
 
 .link {
@@ -70,11 +71,47 @@ html {
   scroll-snap-align: start;
 }
 
-.bottom-right {
+.bottom {
   position: fixed;
   bottom: 0;
-  right: 15px;
+  left: 0;
+  right: 0;
+  background-color: black;
   color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
+}
+
+.section-with-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.section-text {
+  max-width: 500px;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 7px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
   font-family:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     Helvetica;
