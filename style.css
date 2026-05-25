@@ -98,4 +98,29 @@ html {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
+  cursor:
+    url(Assets/cursor.png) 8 8,
+    auto;
+}
+
+.social-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 64px;
+  cursor:
+    url(Assets/cursor.png) 8 8,
+    auto;
+}
+
+.button-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
 }

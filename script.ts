@@ -43,3 +43,26 @@ document.addEventListener("wheel", (direction) => {
     handleKey("ArrowUp");
   }
 }, { passive: false });
+
+let touchStartY = 0;
+let touchLocked = false;
+
+document.addEventListener("touchstart", (e) => {
+  const touch = e.touches[0];
+  if (touch) touchStartY = touch.clientY;
+}, { passive: true });
+
+document.addEventListener("touchend", (e) => {
+  if (touchLocked) return;
+  const touch = e.changedTouches[0];
+  if (!touch) return;
+  const deltaY = touchStartY - touch.clientY;
+  if (Math.abs(deltaY) < 30) return;
+  touchLocked = true;
+  setTimeout(() => (touchLocked = false), 800);
+  if (deltaY > 0) {
+    handleKey("ArrowDown");
+  } else {
+    handleKey("ArrowUp");
+  }
+}, { passive: true });
