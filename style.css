@@ -1,6 +1,8 @@
 html {
   height: 100%;
-  cursor: none;
+  cursor:
+    url(Assets/cursor.png) 8 8,
+    auto;
 
   /* Hide scrollbar */
   -webkit-scrollbar {
@@ -36,6 +38,10 @@ html {
   font-family:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     Helvetica;
+  cursor:
+    url(Assets/pointer.png) 8 8,
+    auto;
+  text-decoration: none;
 }
 
 .body {
@@ -67,5 +73,9 @@ html {
 .bottom-right {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 15px;
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    Helvetica;
 }
