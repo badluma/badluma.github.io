@@ -1,6 +1,11 @@
 const sections = ["heading", "comprobot", "hackertyper", "socials"];
 let current = 0;
 
+function updateScrollHint() {
+  const hint = document.getElementById("scroll-hint");
+  if (hint) hint.classList.toggle("hidden", current >= 3);
+}
+
 function handleKey(key: string) {
   const upKeys = ["ArrowUp", "w", "W", "e", "E"];
   const downKeys = ["ArrowDown", "s", "S", "d", "D", "Enter", " "];
@@ -21,7 +26,10 @@ function handleKey(key: string) {
   if (element) {
     element.scrollIntoView({ behavior: "smooth", block: "start" });
   }
+  updateScrollHint();
 }
+
+updateScrollHint();
 
 const navKeys = ["ArrowUp", "ArrowDown", "w", "W", "s", "S", "d", "D", "e", "E", " ", "Enter"];
 

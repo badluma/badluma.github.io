@@ -62,11 +62,19 @@ html {
 
 .bottom {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
   color: white;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.bottom.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .section-with-image {
