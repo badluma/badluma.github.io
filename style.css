@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
   cursor:
     url(Assets/cursor.png) 8 8,
     auto;
@@ -14,31 +15,19 @@ html {
 
 .heading {
   color: white;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
 }
 
 .subheading {
   color: white;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
 }
 
 .text {
   color: white;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
   max-width: 500px;
 }
 
 .link {
   color: royalblue;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
   cursor:
     url(Assets/pointer.png) 8 8,
     auto;
@@ -78,9 +67,6 @@ html {
   right: 0;
   background-color: black;
   color: white;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
 }
 
 .section-with-image {
@@ -112,7 +98,4 @@ html {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
-  font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    Helvetica;
 }
