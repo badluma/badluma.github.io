@@ -1,9 +1,15 @@
-const sections = ["heading", "comprobot", "hackertyper", "socials"];
+const sections = [
+  "heading",
+  "comprobot",
+  "hackertyper",
+  "liquidmod",
+  "socials",
+];
 let current = 0;
 
 function updateScrollHint() {
   const hint = document.getElementById("scroll-hint");
-  if (hint) hint.classList.toggle("hidden", current >= 3);
+  if (hint) hint.classList.toggle("hidden", current >= 4);
 }
 
 function handleKey(key: string) {
@@ -31,7 +37,20 @@ function handleKey(key: string) {
 
 updateScrollHint();
 
-const navKeys = ["ArrowUp", "ArrowDown", "w", "W", "s", "S", "d", "D", "e", "E", " ", "Enter"];
+const navKeys = [
+  "ArrowUp",
+  "ArrowDown",
+  "w",
+  "W",
+  "s",
+  "S",
+  "d",
+  "D",
+  "e",
+  "E",
+  " ",
+  "Enter",
+];
 
 document.addEventListener("keydown", (e) => {
   if (navKeys.includes(e.key)) e.preventDefault();
@@ -40,37 +59,49 @@ document.addEventListener("keydown", (e) => {
 
 let wheelLocked = false;
 
-document.addEventListener("wheel", (direction) => {
-  direction.preventDefault();
-  if (wheelLocked) return;
-  wheelLocked = true;
-  setTimeout(() => (wheelLocked = false), 800);
-  if (direction.deltaY > 0) {
-    handleKey("ArrowDown");
-  } else if (direction.deltaY < 0) {
-    handleKey("ArrowUp");
-  }
-}, { passive: false });
+document.addEventListener(
+  "wheel",
+  (direction) => {
+    direction.preventDefault();
+    if (wheelLocked) return;
+    wheelLocked = true;
+    setTimeout(() => (wheelLocked = false), 800);
+    if (direction.deltaY > 0) {
+      handleKey("ArrowDown");
+    } else if (direction.deltaY < 0) {
+      handleKey("ArrowUp");
+    }
+  },
+  { passive: false },
+);
 
 let touchStartY = 0;
 let touchLocked = false;
 
-document.addEventListener("touchstart", (e) => {
-  const touch = e.touches[0];
-  if (touch) touchStartY = touch.clientY;
-}, { passive: true });
+document.addEventListener(
+  "touchstart",
+  (e) => {
+    const touch = e.touches[0];
+    if (touch) touchStartY = touch.clientY;
+  },
+  { passive: true },
+);
 
-document.addEventListener("touchend", (e) => {
-  if (touchLocked) return;
-  const touch = e.changedTouches[0];
-  if (!touch) return;
-  const deltaY = touchStartY - touch.clientY;
-  if (Math.abs(deltaY) < 30) return;
-  touchLocked = true;
-  setTimeout(() => (touchLocked = false), 800);
-  if (deltaY > 0) {
-    handleKey("ArrowDown");
-  } else {
-    handleKey("ArrowUp");
-  }
-}, { passive: true });
+document.addEventListener(
+  "touchend",
+  (e) => {
+    if (touchLocked) return;
+    const touch = e.changedTouches[0];
+    if (!touch) return;
+    const deltaY = touchStartY - touch.clientY;
+    if (Math.abs(deltaY) < 30) return;
+    touchLocked = true;
+    setTimeout(() => (touchLocked = false), 800);
+    if (deltaY > 0) {
+      handleKey("ArrowDown");
+    } else {
+      handleKey("ArrowUp");
+    }
+  },
+  { passive: true },
+);
